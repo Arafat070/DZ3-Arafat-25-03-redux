@@ -16,7 +16,7 @@ function MainPosts() {
         axios
             .delete(`https://dummyjson.com/posts/${postId}`)
             .then(() => {
-                setPosts((prevPosts) => prevPosts.filter((post) => post.id !== postId));
+                console.log(`Пост с ID ${postId} был успешно удален на dummyjson.com.`);
             })
             .catch((error) => console.log(error));
     };
